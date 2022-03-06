@@ -21,14 +21,14 @@ body{
 
 /* TITULO CAMBIA A NEGRO SI SE LE PASA EL MOUSE POR ENCIMA */
 .navbar-logo:hover {
-	color: #000;
+	color: #ff4f00;
 }
 
 /* FONDO DEL NAV */
 .navbar-mainbg{
 	padding: 0px;
 
-	background: linear-gradient(to right, #f00, #00f);
+	background: linear-gradient(to right, #000 20%, #ff4f00);
 }
 
 /* OCULTAR EL SCROLL DEL NAV */
@@ -65,12 +65,9 @@ body{
 
 	color: #fff;
 
-	transition-duration:0.6s;
-	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
 	/* cambiar el color de las letras, transparente a blanco*/
 	animation-name: color-change;
-	animation-duration: 1.8s;
+	animation-duration: 1.2s;
 }
 
 /* ANIMACION DE LA LETRA [pasa de transparente a blanco] */
@@ -92,7 +89,6 @@ body{
 #navbarSupportedContent>ul>li.active>a{
 	color: #ff4f00 !important; 
 	background-color: transparent;
-	transition: all 0.7s;
 }
 
 /* NI IDEA QUE SEA ESTO, PERO NO LE JUEGUES AL VERGAS*/
@@ -106,7 +102,6 @@ body{
 	padding-right: 3px;
 	vertical-align: middle;
 	font-weight: 900;
-	transition: 0.5s;
 }
 #navbarSupportedContent .active>a:not(:only-child):after {
 	transform: rotate(90deg);
@@ -118,9 +113,9 @@ body{
 	position:absolute;
 	height: 100%;
 	top: 0px;
-	left: 0px;
-	transition-duration:0.6s;
-	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	left: 110%;
+	transition-delay: 0.2s;
+	transition-duration: 0.4s;
 	background-color: #fff;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -183,8 +178,10 @@ body{
 @media (max-width: 991px){
 	#navbarSupportedContent ul li a{
 		padding: 12px 30px;
+		animation-duration: 1s;
 	}
 	.hori-selector{
+		transition-delay: 0.1s;
 		margin-top: 0px;
 		margin-left: 10px;
 		border-radius: 0;
