@@ -1,61 +1,102 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Praise&display=swap');
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Fredoka', sans-serif;
 }
 * {
 	margin: 0;
 	padding: 0;
 }
-i {
-	margin-right: 10px;
-}
+
 /*----------bootstrap-navbar-css------------*/
+
+/* TEXTO DE TITULO */
 .navbar-logo{
-	padding: 15px;
+	font-size: 30px;
+	font-weight: 600;
+	padding: 5px;
+
 	color: #fff;
 }
+
+/* FONDO DEL NAV */
 .navbar-mainbg{
-	background-color: #5161ce;
 	padding: 0px;
+
+	background-color: #ff4f00;
 }
+
+/* OCULTAR EL SCROLL DEL NAV */
 #navbarSupportedContent{
-	overflow: hidden;
 	position: relative;
+	overflow: hidden;
 }
+
+/* QUITAR EL MARGIN Y EL PADDING DE LAS VIÑETAS */
 #navbarSupportedContent ul{
 	padding: 0px;
 	margin: 0px;
 }
+
+/* ICONOS AL LADO IZQUIERDO DE CADA TEXTO */
 #navbarSupportedContent ul li a i{
-	margin-right: 10px;
+	margin-right: 5px;
 }
+
+/* LISTA / RESET DE DISEÑO Y FLOAT */
 #navbarSupportedContent li {
 	list-style-type: none;
 	float: left;
 }
+
+/* TEXTO DE CADA SECCION */
 #navbarSupportedContent ul li a{
-	color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    font-size: 15px;
     display: block;
-    padding: 20px 20px;
-    transition-duration:0.6s;
-	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
+    text-decoration: none;
+
+    font-size: 15px;
+    padding: 20px 20px;
+
+	color: #fff;
+
+	transition-duration:0.6s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+	/* cambiar el color de las letras, transparente a blanco*/
+	animation-name: color-change;
+	animation-duration: 1.8s;
 }
+
+/* ANIMACION DE LA LETRA [pasa de transparente a blanco] */
+@keyframes color-change {
+	from {
+		color: transparent;
+	}
+
+	50% {
+		color: transparent;
+	}
+
+	to {
+		color: #fff;
+	}
+}
+
+/* COLOR DEL TEXTO DEL SELECTOR */
 #navbarSupportedContent>ul>li.active>a{
-	color: #5161ce;
+	color: #ff4f00 !important; 
 	background-color: transparent;
 	transition: all 0.7s;
 }
+
+/* NI IDEA QUE SEA ESTO, PERO NO LE JUEGUES AL VERGAS*/
 #navbarSupportedContent a:not(:only-child):after {
 	content: "\f105";
 	position: absolute;
 	right: 20px;
 	top: 10px;
 	font-size: 14px;
-	font-family: "Font Awesome 5 Free";
 	display: inline-block;
 	padding-right: 3px;
 	vertical-align: middle;
@@ -65,6 +106,8 @@ i {
 #navbarSupportedContent .active>a:not(:only-child):after {
 	transform: rotate(90deg);
 }
+
+/* FONDO PRINCIPAL DEL SELECTOR BLANCO */
 .hori-selector{
 	display:inline-block;
 	position:absolute;
@@ -78,6 +121,8 @@ i {
 	border-top-right-radius: 15px;
 	margin-top: 10px;
 }
+
+/* BORDES REDONDEADOS DEL SELECTOR */
 .hori-selector .right,
 .hori-selector .left{
 	position: absolute;
@@ -86,12 +131,14 @@ i {
 	background-color: #fff;
 	bottom: 10px;
 }
-.hori-selector .right{
+.hori-selector .right{ /*mover a la derecha*/
 	right: -25px;
 }
-.hori-selector .left{
+.hori-selector .left{ /*mover a la izquierda*/
 	left: -25px;
 }
+
+/* CIRCULOS EN AL LADO DEL SELECTOR [Debe ir del mismo color del fondo del nav]*/
 .hori-selector .right:before,
 .hori-selector .left:before{
 	content: '';
@@ -99,18 +146,31 @@ i {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #5161ce;
+    background-color: #ff4f00;
 }
-.hori-selector .right:before{
+.hori-selector .right:before{ /*mover a la derecha*/
 	bottom: 0;
     right: -25px;
 }
-.hori-selector .left:before{
+.hori-selector .left:before{ /*mover a la izquierda*/
 	bottom: 0;
     left: -25px;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* R E S P O N S I V E */
 @media(min-width: 992px){
 	.navbar-expand-custom {
 	    -ms-flex-flow: row nowrap;
