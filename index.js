@@ -1,10 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-const app = express();
+const app = express(),
+  bodyParser = require('body-parser');
 
 // settings
 app.set('port', process.env.PORT || 3000);
+app.use(bodyParser.json())
 
 //Engine
 app.set('views', path.join(__dirname, 'views'));
